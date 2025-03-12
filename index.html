@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio | Desarrollador Junior</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Header con navegación -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="bracket">{</span>
+                <span class="name">Ignacio Castillo Developer</span>
+                <span class="bracket">}</span>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+                    <div class="toggle-icon">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                    </div>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Sobre Mí</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="glitch-text">Desarrollador Junior</h1>
+            <div class="typing-text"></div>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">Ver Proyectos</a>
+                <a href="#contact" class="btn secondary">Contactar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>desarrollador apasionado por crear experiencias nueva dentro del mundo de las tecnologias, actualmente aprendiendo sobre la ciencia de datos y microservios con flask y Django Api Rest </p>
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <span class="terminal-button"></span>
+                            <span class="terminal-button"></span>
+                            <span class="terminal-button"></span>
+                        </div>
+                        <div class="terminal-content">
+                            <p>> Nombre: <span class="typing">Ignacio Castillo</span></p>
+                            <p>> Rol: <span class="typing">Desarrollador back-end y front-end</span></p>
+                            <p>> Estado: <span class="typing">aprendiendo</span></p>
+                            <p>> Ubicación: <span class="typing">Concepcion (Chile)</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            
+            <!-- Full Stack Development -->
+            <div class="skills-category">
+                <h3 class="category-title">Desarrollo Full Stack</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h4>Django</h4>
+                            <span class="skill-level">Intermedio</span>
+                        </div>
+                        <ul class="skill-details">
+                            <li>Django REST Framework</li>
+                            <li>ORM & Modelos</li>
+                            <li>Autenticación & Seguridad</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h4>Python</h4>
+                            <span class="skill-level">Intermedio/avanzado</span>
+                        </div>
+                        <ul class="skill-details">
+                            <li>POO</li>
+                            <li>APIs con Flask & rest api</li>
+                            <li>Estructura de Datos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Development -->
+            <div class="skills-category">
+                <h3 class="category-title">Frontend</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h4>HTML5 & CSS3</h4>
+                            <span class="skill-level">Intermedio</span>
+                        </div>
+                       
+                        <ul class="skill-details">
+                            <li>Diseño Responsivo</li>
+                            <li>Flexbox & Grid</li>
+                            <li>Animaciones</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h4>JavaScript</h4>
+                            <span class="skill-level">aprendiendo</span>
+                        </div>
+                        <ul class="skill-details">
+                            <li>Chart.js</li>
+                            <li>DOM Manipulation</li>
+                            <li>Async/Await</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Science -->
+            <div class="skills-category">
+                <h3 class="category-title">Ciencia de Datos</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h4>Análisis de Datos</h4>
+                            <span class="skill-level">aprendiendo</span>
+                        </div>
+                        <ul class="skill-details">
+                            <li>Pandas & NumPy</li>
+                            <li>Visualización de Datos con matplotlib</li>
+                            <li>manejo de archivo csv & excel</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h4>Base de datos</h4>
+                            <span class="skill-level">Intermedio</span>
+                        </div>
+                        <ul class="skill-details">
+                            <li>Sqlite</li>
+                            <li>MySQL</li>
+                            <li>SqlServer</li>
+                            <li>access</li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+            </div>
+            <!-- Moviles -->
+            <div class="skills-category">
+                <h3 class="category-title">APP moviles</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <h4>Android Studio</h4>
+                            <span class="skill-level">Intermedio</span>
+                        </div>
+                        <ul class="skill-details">
+                            <li>Kotlin</li>
+                            <li>Firebase</li>
+                            <li>XML</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="projects-grid">
+                
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="SalaEnsayo.jpg" alt="Proyecto 2">
+                        <div class="project-overlay">
+                            <div class="project-details">
+                                <h3>Sala Audio</h3>
+                                <p>HTML, CSS, JavaScript, PHP</p>
+                                <div class="project-links">
+                                    <a href="https://feriasoftwareconcepcion.cl/TSI/grupo2/SalaAudioGIT/Index.php" class="btn">Visitar Sitio</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Puedes añadir más project-card aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <!-- Formulario de contacto -->
+                <div id="alert-container"></div>
+                <form class="contact-form" id="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="from_name">Nombre</label>
+                        <input type="text" id="from_name" name="from_name" placeholder="Tu nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="from_email">Correo electrónico</label>
+                        <input type="email" id="from_email" name="from_email" placeholder="tu@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    
+                    
+                    <button type="submit" class="submit-btn">Enviar mensaje</button>
+                    <div id="alert-container"></div>
+
+                </form>
+                
+                <!-- Información de contacto y redes sociales -->
+                <div class="contact-info">
+                    <h3>Conectemos</h3>
+                    <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto? No dudes en contactarme a través del formulario o mis redes sociales.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/RazeZor" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/nacho-javier-831811295/" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://www.instagram.com/n4cho_j4vier/" class="social-link"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; Ignacio Castillo Jaramillo / RazeZorDev</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="hamburgesa.jss"></script>
+</body>
+</html>
+
