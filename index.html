@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio | Desarrollador Junior</title>
-    <link rel="stylesheet" href="index.css">
+    <meta name="description" content="Portfolio de Ignacio Castillo - Desarrollador Junior especializado en Python, Django y desarrollo web">
+    <title>Ignacio Castillo | Desarrollador Junior</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
+    <!-- Preconectar a dominios externos para mejorar rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{}</text></svg>">
 </head>
 <body>
+    <!-- Efecto de scanlines para aspecto retro -->
+    <div class="scanlines" aria-hidden="true"></div>
 
     <!-- Header con navegación -->
     <header>
@@ -20,8 +26,8 @@
                 <span class="name">ICJ Developer</span>
                 <span class="bracket">}</span>
             </div>
-            <nav>
-                <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+            <nav aria-label="Navegación principal">
+                <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle" aria-expanded="false">
                     <div class="toggle-icon">
                         <span class="line line-1"></span>
                         <span class="line line-2"></span>
@@ -40,9 +46,10 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="particles-container" aria-hidden="true"></div>
         <div class="container">
             <h1 class="glitch-text">Desarrollador Junior</h1>
-            <div class="typing-text"></div>
+            <div class="typing-text" aria-live="polite"></div>
             <div class="cta-buttons">
                 <a href="#projects" class="btn primary">Ver Proyectos</a>
                 <a href="#contact" class="btn secondary">Contactar</a>
@@ -56,18 +63,20 @@
             <h2 class="section-title">Sobre Mí</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>desarrollador apasionado por crear experiencias nueva dentro del mundo de las tecnologias, actualmente aprendiendo sobre la ciencia de datos y microservios con flask y Django Api Rest </p>
+                    <p>Desarrollador apasionado por crear experiencias nuevas dentro del mundo de las tecnologías, actualmente aprendiendo sobre la ciencia de datos y microservicios con Flask y Django API Rest.</p>
                     <div class="terminal">
                         <div class="terminal-header">
-                            <span class="terminal-button"></span>
-                            <span class="terminal-button"></span>
-                            <span class="terminal-button"></span>
+                            <span class="terminal-button" aria-hidden="true"></span>
+                            <span class="terminal-button" aria-hidden="true"></span>
+                            <span class="terminal-button" aria-hidden="true"></span>
+                            <span class="terminal-title">Datos</span>
                         </div>
                         <div class="terminal-content">
                             <p>> Nombre: <span class="typing">Ignacio Castillo</span></p>
                             <p>> Rol: <span class="typing">Desarrollador back-end y front-end</span></p>
                             <p>> Estado: <span class="typing">aprendiendo</span></p>
-                            <p>> Ubicación: <span class="typing">Concepcion (Chile)</span></p>
+                            <p>> Ubicación: <span class="typing">Concepción (Chile)</span></p>
+                            <p class="terminal-cursor">_</p>
                         </div>
                     </div>
                 </div>
@@ -84,7 +93,7 @@
             <div class="skills-category">
                 <h3 class="category-title">Desarrollo Full Stack</h3>
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up">
                         <div class="skill-header">
                             <h4>Django</h4>
                             <span class="skill-level">Intermedio</span>
@@ -97,7 +106,7 @@
                         </ul>
                     </div>
     
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="skill-header">
                             <h4>Python</h4>
                             <span class="skill-level">Intermedio/avanzado</span>
@@ -105,7 +114,7 @@
                         </div>
                         <ul class="skill-details">
                             <li>POO</li>
-                            <li>APIs con Flask & rest api</li>
+                            <li>APIs con Flask & REST API</li>
                             <li>Estructura de Datos</li>
                         </ul>
                     </div>
@@ -116,7 +125,7 @@
             <div class="skills-category">
                 <h3 class="category-title">Frontend</h3>
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up">
                         <div class="skill-header">
                             <h4>HTML5 & CSS3</h4>
                             <span class="skill-level">Intermedio</span>
@@ -131,7 +140,7 @@
                         </ul>
                     </div>
     
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="skill-header">
                             <h4>JavaScript</h4>
                             <span class="skill-level">Aprendiendo</span>
@@ -150,7 +159,7 @@
             <div class="skills-category">
                 <h3 class="category-title">Ciencia de Datos</h3>
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up">
                         <div class="skill-header">
                             <h4>Análisis de Datos</h4>
                             <span class="skill-level">Aprendiendo</span>
@@ -163,7 +172,7 @@
                         </ul>
                     </div>
     
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="skill-header">
                             <h4>Base de datos</h4>
                             <span class="skill-level">Intermedio</span>
@@ -183,7 +192,7 @@
             <div class="skills-category">
                 <h3 class="category-title">APP Móviles</h3>
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up">
                         <div class="skill-header">
                             <h4>Android Studio</h4>
                             <span class="skill-level">Intermedio</span>
@@ -200,33 +209,55 @@
         </div>
     </section>
     
-
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Proyectos</h2>
-            <div class="projects-grid">
-                
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="SalaEnsayo.jpg" alt="Proyecto 2">
-                        <div class="project-overlay">
-                            <div class="project-details">
-                                <h3>Sala Audio</h3>
-                                <p>HTML, CSS, JavaScript, PHP</p>
-                                <div class="project-links">
-                                    <a href="https://feriasoftwareconcepcion.cl/TSI/grupo2/SalaAudioGIT/Index.php" class="btn">Visitar Sitio</a>
-                                    
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Proyectos</h2>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Móvil</button>
+                </div>
+                <center>
+                    <div class="projects-grid">
+                        <article class="project-card" data-category="web">
+                            <div class="project-image">
+                                <img src="SalaEnsayo.jpg" alt="Proyecto Sala Audio - Interfaz de la aplicación" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-details">
+                                        <h3>Sala Audio</h3>
+                                        <p>HTML, CSS, JavaScript, PHP</p>
+                                        <div class="project-links">
+                                            <a href="https://feriasoftwareconcepcion.cl/TSI/grupo2/SalaAudioGIT/Index.php" class="btn" target="_blank" rel="noopener">Visitar Sitio</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
+                        
+                        
+                        <!-- Proyecto de ejemplo adicional -->
+                        <article class="project-card" data-category="mobile">
+                            <div class="project-image">
+                                <img src="/Untitled.png" alt="Aplicación móvil" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-details">
+                                        <h3>App Android</h3>
+                                        <p>Kotlin, Firebase</p>
+                                        <div class="project-links">
+                                            <a href="#" class="btn">Ver Detalles</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
+                </center>
                 
-                <!-- Puedes añadir más project-card aquí -->
             </div>
-        </div>
-    </section>
+        </section>
+
+    
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -234,7 +265,7 @@
             <h2 class="section-title">Contacto</h2>
             <div class="contact-content">
                 <!-- Formulario de contacto -->
-                <div id="alert-container"></div>
+                <div id="alert-container" aria-live="polite"></div>
                 <form class="contact-form" id="contact-form" action="#" method="POST">
                     <div class="form-group">
                         <label for="from_name">Nombre</label>
@@ -256,10 +287,10 @@
                         <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
                     </div>
                     
-                    
-                    <button type="submit" class="submit-btn">Enviar mensaje</button>
-                    <div id="alert-container"></div>
-
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Enviar mensaje</span>
+                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                    </button>
                 </form>
                 
                 <!-- Información de contacto y redes sociales -->
@@ -268,9 +299,15 @@
                     <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto? No dudes en contactarme a través del formulario o mis redes sociales.</p>
                     
                     <div class="social-links">
-                        <a href="https://github.com/RazeZor" class="social-link"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://www.linkedin.com/in/nacho-javier-831811295/" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://www.instagram.com/n4cho_j4vier/" class="social-link"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+                        <a href="https://github.com/RazeZor" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i> <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nacho-javier-831811295/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.instagram.com/n4cho_j4vier/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i> <span>Instagram</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -280,12 +317,1434 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; Ignacio Castillo Jaramillo / RazeZorDev</p>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> Ignacio Castillo Jaramillo / RazeZorDev</p>
+                <div class="footer-nav">
+                    <a href="#home">Inicio</a>
+                    <a href="#about">Sobre Mí</a>
+                    <a href="#skills">Habilidades</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="index.js"></script>
-    <script src="hamburgesa.jss"></script>
+    <style>
+        /* Variables y reset */
+        :root {
+            --color-bg: #0a0a0a;
+            --color-text: #e0e0e0;
+            --color-primary: #00ff9d;
+            --color-primary-dark: #00cc7d;
+            --color-secondary: #232323;
+            --color-secondary-light: #333333;
+            --color-accent: #ff0055;
+            --color-accent-light: #ff3377;
+            --color-error: #ff3333;
+            --color-success: #33ff99;
+            --font-mono: "Space Mono", monospace;
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.2);
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Altura del header */
+        }
+        
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-mono);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Efecto Scanlines */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 50%, rgba(0, 0, 0, 0.03) 50%);
+            background-size: 100% 4px;
+            opacity: 0.3;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+        
+        /* Header y Navegación */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-primary);
+            transition: all var(--transition-normal);
+        }
+        
+        header.scrolled {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            height: 60px;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            transition: height var(--transition-normal);
+        }
+        
+        header.scrolled .container {
+            height: 60px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            transition: all var(--transition-normal);
+        }
+        
+        header.scrolled .logo {
+            font-size: 1.3rem;
+        }
+        
+        .bracket {
+            color: var(--color-primary);
+            transition: color var(--transition-fast);
+        }
+        
+        .logo:hover .bracket {
+            color: var(--color-accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color var(--transition-fast);
+        }
+        
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-primary);
+            transition: width var(--transition-normal) ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        /* Mejoras para el menú hamburguesa */
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 10px;
+        }
+        
+        .toggle-icon {
+            position: relative;
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: transform var(--transition-normal) ease, 
+                        opacity var(--transition-normal) ease;
+        }
+        
+        .line-1 {
+            top: 0;
+        }
+        
+        .line-2 {
+            bottom: 0;
+        }
+        
+        /* Animación para el botón cuando está activo */
+        .menu-toggle.active .line-1 {
+            transform: translateY(10px) rotate(45deg);
+        }
+        
+        .menu-toggle.active .line-2 {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+            background: radial-gradient(circle at center, #1a1a1a 0%, var(--color-bg) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero h1::before,
+        .hero h1::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+        
+        .hero h1::before {
+            color: var(--color-accent);
+            z-index: -1;
+            animation: glitch-1 2s infinite linear alternate-reverse;
+        }
+        
+        .hero h1::after {
+            color: var(--color-primary);
+            z-index: -2;
+            animation: glitch-2 3s infinite linear alternate-reverse;
+        }
+        
+        .typing-text {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            height: 2em;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        /* Botones */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border: 2px solid var(--color-primary);
+            color: var(--color-text);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+            margin: 0.5rem;
+            border-radius: var(--border-radius-sm);
+            background-color: transparent;
+            cursor: pointer;
+            font-family: var(--font-mono);
+        }
+        
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--color-primary);
+            transition: transform var(--transition-normal);
+            z-index: -1;
+        }
+        
+        .btn:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .btn:hover {
+            color: var(--color-bg);
+            box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+        }
+        
+        .btn.secondary {
+            border-color: var(--color-accent);
+        }
+        
+        .btn.secondary::before {
+            background: var(--color-accent);
+        }
+        
+        .btn.secondary:hover {
+            box-shadow: 0 5px 15px rgba(255, 0, 85, 0.3);
+        }
+        
+        .btn-icon {
+            margin-left: 8px;
+            transition: transform var(--transition-fast);
+        }
+        
+        .btn:hover .btn-icon {
+            transform: translateX(4px);
+        }
+        
+        /* Secciones */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        section:nth-child(even) {
+            background-color: rgba(35, 35, 35, 0.3);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--color-primary);
+        }
+        
+        /* Terminal */
+        .terminal {
+            background: var(--color-secondary);
+            border-radius: var(--border-radius-md);
+            padding: 1rem;
+            margin: 2rem 0;
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+            border: 1px solid rgba(0, 255, 157, 0.2);
+            overflow: hidden;
+        }
+        
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .terminal-title {
+            margin-left: auto;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-accent);
+        }
+        
+        .terminal-button:nth-child(2) {
+            background: #ffbd2e;
+        }
+        
+        .terminal-button:nth-child(3) {
+            background: #27c93f;
+        }
+        
+        .terminal-content {
+            font-family: var(--font-mono);
+            color: var(--color-primary);
+        }
+        
+        .terminal-content p {
+            margin: 0.5rem 0;
+            line-height: 1.8;
+        }
+        
+        .terminal-cursor {
+            display: inline-block;
+            width: 0.6em;
+            height: 1em;
+            background-color: var(--color-primary);
+            animation: blink 1s step-end infinite;
+            margin-left: 2px;
+            vertical-align: middle;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        /* Skills */
+        .skills-category {
+            margin-bottom: 4rem;
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--color-primary);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background: var(--color-secondary);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-md);
+            transition: all var(--transition-normal);
+            border: 1px solid transparent;
+            box-shadow: var(--shadow-sm);
+            transform: translateY(0);
+            opacity: 0;
+            animation: fadeInUp 0.6s forwards;
+            animation-delay: calc(var(--delay, 0) * 100ms);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .skill-header h4 {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-right: auto;
+        }
+        
+        .skill-level {
+            font-size: 0.8rem;
+            color: var(--color-primary);
+            padding: 0.2rem 0.8rem;
+            border: 1px solid var(--color-primary);
+            border-radius: 12px;
+            margin-right: 0.5rem;
+        }
+        
+        .skill-header i {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-left: 0.5rem;
+        }
+        
+        .skill-details {
+            list-style: none;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--color-text);
+        }
+        
+        .skill-details li {
+            margin: 0.5rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        
+        .skill-details li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+        }
+        
+        /* Projects */
+        .projects-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--color-primary);
+            color: var(--color-text);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-family: var(--font-mono);
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--color-primary);
+            color: var(--color-bg);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            position: relative;
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            background: var(--color-secondary);
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            height: 100%;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .project-image {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+        
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        .project-details {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .project-details h3 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-details p {
+            color: var(--color-text);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .project-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .project-links .btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+        }
+        
+        /* Contact Form */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-group label {
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 1rem;
+            background: var(--color-secondary);
+            border: 1px solid var(--color-primary);
+            color: var(--color-text);
+            font-family: var(--font-mono);
+            resize: vertical;
+            border-radius: var(--border-radius-sm);
+            transition: all var(--transition-fast);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 255, 157, 0.3);
+        }
+        
+        .form-group input.error,
+        .form-group textarea.error {
+            border-color: var(--color-error);
+        }
+        
+        .submit-btn {
+            background-color: var(--color-primary);
+            color: var(--color-bg);
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            border-radius: var(--border-radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-family: var(--font-mono);
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+        }
+        
+        .submit-btn.submitting {
+            opacity: 0.7;
+            cursor: wait;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--color-bg);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .contact-info {
+            padding: 2rem;
+            background: var(--color-secondary);
+            border-radius: var(--border-radius-md);
+            border-left: 3px solid var(--color-primary);
+        }
+        
+        .contact-info h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            color: var(--color-text);
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            border: 1px solid var(--color-primary);
+            border-radius: var(--border-radius-sm);
+            transition: all var(--transition-normal);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .social-link:hover {
+            background: var(--color-primary);
+            color: var(--color-bg);
+            transform: translateX(5px);
+        }
+        
+        .social-link i {
+            font-size: 1.2rem;
+        }
+        
+        /* Estilos para las alertas */
+        #alert-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .alert {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: var(--border-radius-sm);
+            margin-bottom: 15px;
+            font-size: 16px;
+            width: 300px;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .alert.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .alert.show {
+            opacity: 1;
+        }
+        
+        .alert.hide {
+            opacity: 0;
+        }
+        
+        .alert i {
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: var(--color-secondary);
+            margin-top: 4rem;
+            border-top: 1px solid rgba(0, 255, 157, 0.2);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color var(--transition-fast);
+        }
+        
+        .footer-nav a:hover {
+            color: var(--color-primary);
+        }
+        
+        /* Animaciones */
+        @keyframes glitch-1 {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+        
+        @keyframes glitch-2 {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(2px, -2px); }
+            40% { transform: translate(2px, 2px); }
+            60% { transform: translate(-2px, -2px); }
+            80% { transform: translate(-2px, 2px); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                transition: right var(--transition-normal);
+                gap: 2rem;
+                padding-top: 80px;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links a {
+                font-size: 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-nav {
+                margin-top: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .typing-text {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.8rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+    
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener("DOMContentLoaded", function() {
+            // ===== INICIALIZACIÓN DE COMPONENTES =====
+            initTypingEffect();
+            initMobileMenu();
+            initSmoothScroll();
+            initParticlesEffect();
+            initProjectsFilter();
+            initContactForm();
+            initScrollEffects();
+            
+            // Actualizar año en el footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Añadir atributo data-text al h1 para el efecto glitch
+            const h1 = document.querySelector('.glitch-text');
+            if (h1) {
+                h1.setAttribute('data-text', h1.textContent);
+            }
+        });
+        
+        // ===== EFECTO DE TYPING =====
+        function initTypingEffect() {
+            const typingText = document.querySelector(".typing-text");
+            if (!typingText) return;
+            
+            const texts = [
+                "Desarrollador Backend", 
+                "Creador de Experiencias Web", 
+                "Aprendiz Constante",
+                "Desarrollador de Python & Django"
+            ];
+            
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100; // Velocidad base de escritura
+            
+            function typeEffect() {
+                const currentText = texts[textIndex];
+                
+                // Calcular velocidad dinámica
+                if (isDeleting) {
+                    // Borrar más rápido que escribir
+                    typingSpeed = 50;
+                } else {
+                    // Velocidad aleatoria para efecto más natural
+                    typingSpeed = Math.random() * 50 + 80;
+                }
+                
+                // Efecto de typing
+                if (isDeleting) {
+                    typingText.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingText.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                // Lógica para cambiar entre escribir y borrar
+                if (!isDeleting && charIndex === currentText.length) {
+                    // Pausa al final de escribir
+                    isDeleting = true;
+                    typingSpeed = 1500; // Pausa antes de borrar
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % texts.length;
+                    typingSpeed = 500; // Pausa antes de escribir nuevo texto
+                }
+                
+                setTimeout(typeEffect, typingSpeed);
+            }
+            
+            // Iniciar efecto
+            typeEffect();
+        }
+        
+        // ===== MENÚ MÓVIL =====
+        function initMobileMenu() {
+            const menuToggle = document.getElementById("menuToggle");
+            const navLinks = document.querySelector(".nav-links");
+            
+            if (!menuToggle || !navLinks) return;
+            
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+                menuToggle.classList.toggle("active");
+                menuToggle.setAttribute('aria-expanded', 
+                    menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+                
+                // Añadir animación a los elementos del menú
+                const navItems = navLinks.querySelectorAll("li");
+                navItems.forEach((item, index) => {
+                    // Resetear animación
+                    item.style.animation = "none";
+                    item.offsetHeight; // Forzar reflow
+                    
+                    if (navLinks.classList.contains("active")) {
+                        item.style.animation = `fadeInUp 0.5s ease forwards ${index * 0.1 + 0.2}s`;
+                    } else {
+                        item.style.animation = "";
+                    }
+                });
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            navLinks.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("active");
+                    menuToggle.classList.remove("active");
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+            
+            // Cerrar menú al hacer clic fuera
+            document.addEventListener("click", (e) => {
+                if (
+                    navLinks.classList.contains("active") &&
+                    !navLinks.contains(e.target) &&
+                    !menuToggle.contains(e.target)
+                ) {
+                    navLinks.classList.remove("active");
+                    menuToggle.classList.remove("active");
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+        
+        // ===== SMOOTH SCROLL =====
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute("href");
+                    const target = document.querySelector(targetId);
+                    
+                    if (target) {
+                        // Scroll suave con efecto de aceleración
+                        window.scrollTo({
+                            top: target.offsetTop - 80, // Ajustar por la altura del header
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Resaltar enlace de navegación activo según la sección visible
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-links a");
+            
+            function highlightNavLink() {
+                let current = "";
+                const scrollPosition = window.scrollY;
+                
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        current = section.getAttribute("id");
+                    }
+                });
+                
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${current}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+            
+            window.addEventListener("scroll", highlightNavLink);
+            highlightNavLink(); // Ejecutar al cargar la página
+        }
+        
+        // ===== EFECTO DE PARTÍCULAS =====
+        function initParticlesEffect() {
+            const container = document.querySelector(".particles-container");
+            if (!container) return;
+            
+            const canvas = document.createElement("canvas");
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            container.appendChild(canvas);
+            
+            const ctx = canvas.getContext("2d");
+            const particles = [];
+            const particleCount = Math.min(window.innerWidth / 10, 100); // Ajustar según el ancho de la pantalla
+            
+            // Obtener color primario de las variables CSS
+            const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--color-primary').trim();
+            const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim();
+            
+            // Crear partículas
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 2 + 1,
+                    color: Math.random() > 0.5 ? primaryColor : accentColor,
+                    speedX: Math.random() * 1 - 0.5,
+                    speedY: Math.random() * 1 - 0.5,
+                    opacity: Math.random() * 0.5 + 0.1
+                });
+            }
+            
+            // Función para dibujar partículas
+            function drawParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Actualizar y dibujar partículas
+                particles.forEach(particle => {
+                    // Mover partícula
+                    particle.x += particle.speedX;
+                    particle.y += particle.speedY;
+                    
+                    // Rebotar en los bordes
+                    if (particle.x < 0 || particle.x > canvas.width) {
+                        particle.speedX *= -1;
+                    }
+                    
+                    if (particle.y < 0 || particle.y > canvas.height) {
+                        particle.speedY *= -1;
+                    }
+                    
+                    // Dibujar partícula
+                    ctx.beginPath();
+                    ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = particle.color;
+                    ctx.globalAlpha = particle.opacity;
+                    ctx.fill();
+                });
+                
+                // Conectar partículas cercanas
+                ctx.globalAlpha = 0.2;
+                ctx.strokeStyle = primaryColor;
+                ctx.lineWidth = 0.5;
+                
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < 100) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+                
+                requestAnimationFrame(drawParticles);
+            }
+            
+            // Iniciar animación
+            drawParticles();
+            
+            // Ajustar canvas al redimensionar ventana
+            window.addEventListener("resize", () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+        
+        // ===== FILTRO DE PROYECTOS =====
+        function initProjectsFilter() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            if (!filterButtons.length || !projectCards.length) return;
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Actualizar botones activos
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // Filtrar proyectos
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        }
+        
+        // ===== FORMULARIO DE CONTACTO =====
+        function initContactForm() {
+            const contactForm = document.getElementById("contact-form");
+            if (!contactForm) return;
+            
+            // Inicializar EmailJS
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init('U8kP4mwoYqzeuLrAN');
+            }
+            
+            contactForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                // Validar formulario
+                const inputs = contactForm.querySelectorAll("input, textarea");
+                let isValid = true;
+                
+                inputs.forEach(input => {
+                    if (input.hasAttribute("required") && input.value.trim() === "") {
+                        input.classList.add("error");
+                        isValid = false;
+                    } else {
+                        input.classList.remove("error");
+                    }
+                });
+                
+                if (!isValid) {
+                    showAlert('Por favor, completa todos los campos requeridos.', 'error');
+                    return;
+                }
+                
+                // Añadir efecto de feedback visual al botón
+                const submitBtn = contactForm.querySelector(".submit-btn");
+                if (submitBtn) {
+                    submitBtn.classList.add("submitting");
+                    submitBtn.innerHTML = '<span class="spinner"></span> Enviando...';
+                }
+                
+                // Enviar el correo usando EmailJS
+                if (typeof emailjs !== 'undefined') {
+                    emailjs.sendForm('service_1hgmyzr', 'template_cvw6e3y', contactForm)
+                        .then(function() {
+                            // Mostrar alerta de éxito
+                            showAlert('¡Mensaje enviado con éxito!', 'success');
+                            
+                            // Resetear formulario
+                            contactForm.reset();
+                            
+                            // Restaurar botón
+                            if (submitBtn) {
+                                submitBtn.classList.remove("submitting");
+                                submitBtn.innerHTML = '<span class="btn-text">Enviar mensaje</span><span class="btn-icon"><i class="fas fa-paper-plane"></i></span>';
+                            }
+                        }, function(error) {
+                            // Mostrar alerta de error
+                            showAlert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.', 'error');
+                            
+                            // Restaurar botón
+                            if (submitBtn) {
+                                submitBtn.classList.remove("submitting");
+                                submitBtn.innerHTML = '<span class="btn-text">Enviar mensaje</span><span class="btn-icon"><i class="fas fa-paper-plane"></i></span>';
+                            }
+                        });
+                } else {
+                    // Simulación de envío para desarrollo
+                    setTimeout(() => {
+                        showAlert('Simulación: ¡Mensaje enviado con éxito!', 'success');
+                        contactForm.reset();
+                        
+                        if (submitBtn) {
+                            submitBtn.classList.remove("submitting");
+                            submitBtn.innerHTML = '<span class="btn-text">Enviar mensaje</span><span class="btn-icon"><i class="fas fa-paper-plane"></i></span>';
+                        }
+                    }, 2000);
+                }
+            });
+            
+            // Validación en tiempo real
+            const inputs = contactForm.querySelectorAll("input, textarea");
+            inputs.forEach(input => {
+                input.addEventListener("blur", function() {
+                    if (this.hasAttribute("required") && this.value.trim() === "") {
+                        this.classList.add("error");
+                    } else {
+                        this.classList.remove("error");
+                    }
+                });
+                
+                input.addEventListener("focus", function() {
+                    this.classList.remove("error");
+                });
+            });
+        }
+        
+        // ===== EFECTOS DE SCROLL =====
+        function initScrollEffects() {
+            // Header compacto al hacer scroll
+            const header = document.querySelector('header');
+            
+            function handleScroll() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                // Animar elementos cuando son visibles
+                animateOnScroll();
+            }
+            
+            window.addEventListener('scroll', handleScroll);
+            
+            // Animación al hacer scroll
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('[data-aos]');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight * 0.85) {
+                        element.classList.add('aos-animate');
+                    }
+                });
+            }
+            
+            // Ejecutar al cargar la página
+            animateOnScroll();
+        }
+        
+        // ===== FUNCIÓN PARA MOSTRAR ALERTAS =====
+        function showAlert(message, type = 'success') {
+            // Crear el elemento de alerta
+            const alert = document.createElement('div');
+            alert.classList.add('alert', type);
+            
+            // Añadir icono según el tipo
+            const icon = document.createElement('i');
+            icon.className = type === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle';
+            alert.appendChild(icon);
+            
+            // Añadir mensaje
+            const messageText = document.createElement('span');
+            messageText.textContent = message;
+            alert.appendChild(messageText);
+            
+            // Agregar la alerta al contenedor
+            document.getElementById('alert-container').appendChild(alert);
+            
+            // Mostrar la alerta con animación
+            setTimeout(() => {
+                alert.classList.add('show');
+            }, 10);
+            
+            // Ocultar la alerta después de 4 segundos
+            setTimeout(() => {
+                alert.classList.remove('show');
+                alert.classList.add('hide');
+                
+                setTimeout(() => alert.remove(), 500);
+            }, 4000);
+        }
+    </script>
 </body>
 </html>
-

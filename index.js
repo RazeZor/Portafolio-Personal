@@ -1,5 +1,9 @@
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function() {
+
+    
+
+
   // ===== INICIALIZACIÓN DE COMPONENTES =====
   initTypingEffect();
   initSkillsAnimation();

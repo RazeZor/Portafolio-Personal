@@ -146,20 +146,23 @@ header .container {
 .nav-links a:hover::after {
   width: 100%;
 }
-
-/* Botón de menú para móviles */
+/* Mejoras para el menú hamburguesa */
 .menu-toggle {
   display: none;
   background: transparent;
   border: none;
   cursor: pointer;
   z-index: 1001;
+  padding: 10px;
 }
 
 .toggle-icon {
   position: relative;
   width: 30px;
-  height: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .line {
@@ -167,17 +170,25 @@ header .container {
   width: 100%;
   height: 2px;
   background-color: var(--color-primary);
-  transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, 
+              opacity var(--transition-speed) ease;
 }
 
 .line-1 {
-  top: 10px;
-  transform-origin: center;
+  top: 0;
 }
 
 .line-2 {
-  bottom: 10px;
-  transform-origin: center;
+  bottom: 0;
+}
+
+/* Animación para el botón cuando está activo */
+.menu-toggle.active .line-1 {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.active .line-2 {
+  transform: translateY(-10px) rotate(-45deg);
 }
 
 /* Media queries para dispositivos móviles */
@@ -199,6 +210,7 @@ header .container {
       backdrop-filter: blur(10px);
       transition: right var(--transition-speed) ease;
       gap: 2rem;
+      padding-top: 80px; /* Espacio para el header */
   }
   
   .nav-links.active {
@@ -209,16 +221,12 @@ header .container {
       font-size: 1.5rem;
   }
   
-  /* Animación para el botón cuando está activo */
-  .menu-toggle.active .line-1 {
-      transform: rotate(45deg) translate(7px, 7px);
-  }
-  
-  .menu-toggle.active .line-2 {
-      transform: rotate(-45deg) translate(5px, -5px);
+  /* Asegurarse de que el logo siga visible */
+  .logo {
+      z-index: 1001;
   }
 }
-  
+
   /* Hero Section */
   .hero {
     height: 100vh;
