@@ -495,7 +495,7 @@ emailjs.init('U8kP4mwoYqzeuLrAN'); // Sustituye con tu ID de usuario
                     var formData = new FormData(this);
 
                     // Envía el correo usando EmailJS
-                    emailjs.sendForm('service_1hgmyzr', 'template_cvw6e3y', this)
+                    emailjs.sendForm('service_zq77cnm', 'template_65j74cp', this)
                         .then(function(response) {
                             // Muestra la alerta de éxito
                             showAlert('¡Mensaje enviado con éxito!', 'success');
