@@ -18,6 +18,7 @@
 <body>
     <!-- Efecto de scanlines para aspecto retro -->
     <div class="scanlines" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
 
     <!-- Header con navegación -->
     <header>
@@ -35,182 +36,254 @@
                     </div>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#home" class="nav-link">Inicio</a></li>
+                    <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="particles-container" aria-hidden="true"></div>
-        <div class="container">
-            <h1 class="glitch-text">Desarrollador Junior</h1>
-            <div class="typing-text" aria-live="polite"></div>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary">Ver Proyectos</a>
-                <a href="#contact" class="btn secondary">Contactar</a>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="particles-container" aria-hidden="true"></div>
+            <div class="container">
+                <h1 class="glitch-text" data-text="Desarrollador Junior">Desarrollador Junior</h1>
+                <div class="typing-text" aria-live="polite"></div>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">
+                        <span class="btn-content">Ver Proyectos</span>
+                        <span class="btn-glitch"></span>
+                    </a>
+                    <a href="#contact" class="btn secondary">
+                        <span class="btn-content">Contactar</span>
+                        <span class="btn-glitch"></span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">Sobre Mí</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Desarrollador apasionado por crear experiencias nuevas dentro del mundo de las tecnologías, actualmente aprendiendo sobre la ciencia de datos y microservicios con Flask y Django API Rest.</p>
-                    <div class="terminal">
-                        <div class="terminal-header">
-                            <span class="terminal-button" aria-hidden="true"></span>
-                            <span class="terminal-button" aria-hidden="true"></span>
-                            <span class="terminal-button" aria-hidden="true"></span>
-                            <span class="terminal-title">Datos</span>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Sobre Mí</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Desarrollador apasionado por crear experiencias nuevas dentro del mundo de las tecnologías, actualmente aprendiendo sobre la ciencia de datos y microservicios con Flask y Django API Rest.</p>
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <span class="terminal-button" aria-hidden="true"></span>
+                                <span class="terminal-button" aria-hidden="true"></span>
+                                <span class="terminal-button" aria-hidden="true"></span>
+                                <span class="terminal-title">datos_personales.json</span>
+                            </div>
+                            <div class="terminal-content">
+                                <p>> Nombre: <span class="typing">Ignacio Castillo</span></p>
+                                <p>> Rol: <span class="typing">Desarrollador back-end y front-end</span></p>
+                                <p>> Estado: <span class="typing">aprendiendo</span></p>
+                                <p>> Ubicación: <span class="typing">Concepción (Chile)</span></p>
+                                <p class="terminal-cursor">_</p>
+                            </div>
                         </div>
-                        <div class="terminal-content">
-                            <p>> Nombre: <span class="typing">Ignacio Castillo</span></p>
-                            <p>> Rol: <span class="typing">Desarrollador back-end y front-end</span></p>
-                            <p>> Estado: <span class="typing">aprendiendo</span></p>
-                            <p>> Ubicación: <span class="typing">Concepción (Chile)</span></p>
-                            <p class="terminal-cursor">_</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">2+</div>
+                            <div class="stat-label">Años de experiencia</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">10+</div>
+                            <div class="stat-label">Proyectos completados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">5+</div>
+                            <div class="stat-label">Tecnologías dominadas</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Habilidades</h2>
-    
-            <!-- Full Stack Development -->
-            <div class="skills-category">
-                <h3 class="category-title">Desarrollo Full Stack</h3>
-                <div class="skills-grid">
-                    <div class="skill-card" data-aos="fade-up">
-                        <div class="skill-header">
-                            <h4>Django</h4>
-                            <span class="skill-level">Intermedio</span>
-                            <span><i class="fas fa-server"></i></span>
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Habilidades</h2>
+        
+                <!-- Full Stack Development -->
+                <div class="skills-category">
+                    <h3 class="category-title">Desarrollo Full Stack</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="fade-up">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-header">
+                                    <h4>Django</h4>
+                                    <span class="skill-level">Intermedio</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 75%"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>Django REST Framework</li>
+                                    <li>ORM & Modelos</li>
+                                    <li>Autenticación & Seguridad</li>
+                                </ul>
+                            </div>
                         </div>
-                        <ul class="skill-details">
-                            <li>Django REST Framework</li>
-                            <li>ORM & Modelos</li>
-                            <li>Autenticación & Seguridad</li>
-                        </ul>
+        
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-header">
+                                    <h4>Python</h4>
+                                    <span class="skill-level">Intermedio/avanzado</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 85%"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>POO</li>
+                                    <li>APIs con Flask & REST API</li>
+                                    <li>Estructura de Datos</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="skill-header">
-                            <h4>Python</h4>
-                            <span class="skill-level">Intermedio/avanzado</span>
-                            <span><i class="fab fa-python"></i></span>
+                </div>
+        
+                <!-- Frontend Development -->
+                <div class="skills-category">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="fade-up">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-header">
+                                    <h4>HTML5 & CSS3</h4>
+                                    <span class="skill-level">Intermedio</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 70%"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>Diseño Responsivo</li>
+                                    <li>Flexbox & Grid</li>
+                                    <li>Animaciones</li>
+                                </ul>
+                            </div>
                         </div>
-                        <ul class="skill-details">
-                            <li>POO</li>
-                            <li>APIs con Flask & REST API</li>
-                            <li>Estructura de Datos</li>
-                        </ul>
+        
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-header">
+                                    <h4>JavaScript</h4>
+                                    <span class="skill-level">Aprendiendo</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 50%"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>Chart.js</li>
+                                    <li>DOM Manipulation</li>
+                                    <li>Async/Await</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Data Science -->
+                <div class="skills-category">
+                    <h3 class="category-title">Ciencia de Datos</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="fade-up">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-header">
+                                    <h4>Análisis de Datos</h4>
+                                    <span class="skill-level">Aprendiendo</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 45%"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>Pandas & NumPy</li>
+                                    <li>Visualización de Datos con matplotlib</li>
+                                    <li>Manejo de archivo CSV & Excel</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-header">
+                                    <h4>Base de datos</h4>
+                                    <span class="skill-level">Intermedio</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 75%"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>SQLite</li>
+                                    <li>MySQL</li>
+                                    <li>SQL Server</li>
+                                    <li>Access</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Móviles -->
+                <div class="skills-category">
+                    <h3 class="category-title">APP Móviles</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="fade-up">
+                            <div class="skill-icon">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-header">
+                                    <h4>Android Studio</h4>
+                                    <span class="skill-level">Intermedio</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" style="width: 65%"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>Kotlin</li>
+                                    <li>Firebase</li>
+                                    <li>XML</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-    
-            <!-- Frontend Development -->
-            <div class="skills-category">
-                <h3 class="category-title">Frontend</h3>
-                <div class="skills-grid">
-                    <div class="skill-card" data-aos="fade-up">
-                        <div class="skill-header">
-                            <h4>HTML5 & CSS3</h4>
-                            <span class="skill-level">Intermedio</span>
-                            <span><i class="fab fa-html5"></i></span>
-                            <span><i class="fab fa-css3-alt"></i></span>
-                        </div>
-    
-                        <ul class="skill-details">
-                            <li>Diseño Responsivo</li>
-                            <li>Flexbox & Grid</li>
-                            <li>Animaciones</li>
-                        </ul>
-                    </div>
-    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="skill-header">
-                            <h4>JavaScript</h4>
-                            <span class="skill-level">Aprendiendo</span>
-                            <span><i class="fab fa-js"></i></span>
-                        </div>
-                        <ul class="skill-details">
-                            <li>Chart.js</li>
-                            <li>DOM Manipulation</li>
-                            <li>Async/Await</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Data Science -->
-            <div class="skills-category">
-                <h3 class="category-title">Ciencia de Datos</h3>
-                <div class="skills-grid">
-                    <div class="skill-card" data-aos="fade-up">
-                        <div class="skill-header">
-                            <h4>Análisis de Datos</h4>
-                            <span class="skill-level">Aprendiendo</span>
-                            <span><i class="fas fa-chart-line"></i></span>
-                        </div>
-                        <ul class="skill-details">
-                            <li>Pandas & NumPy</li>
-                            <li>Visualización de Datos con matplotlib</li>
-                            <li>Manejo de archivo CSV & Excel</li>
-                        </ul>
-                    </div>
-    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="skill-header">
-                            <h4>Base de datos</h4>
-                            <span class="skill-level">Intermedio</span>
-                            <span><i class="fas fa-database"></i></span>
-                        </div>
-                        <ul class="skill-details">
-                            <li>SQLite</li>
-                            <li>MySQL</li>
-                            <li>SQL Server</li>
-                            <li>Access</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Móviles -->
-            <div class="skills-category">
-                <h3 class="category-title">APP Móviles</h3>
-                <div class="skills-grid">
-                    <div class="skill-card" data-aos="fade-up">
-                        <div class="skill-header">
-                            <h4>Android Studio</h4>
-                            <span class="skill-level">Intermedio</span>
-                            <span><i class="fab fa-android"></i></span>
-                        </div>
-                        <ul class="skill-details">
-                            <li>Kotlin</li>
-                            <li>Firebase</li>
-                            <li>XML</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Projects Section -->
+        </section>
+        
+        <!-- Projects Section -->
         <section id="projects" class="projects">
             <div class="container">
                 <h2 class="section-title">Proyectos</h2>
@@ -219,116 +292,119 @@
                     <button class="filter-btn" data-filter="web">Web</button>
                     <button class="filter-btn" data-filter="mobile">Móvil</button>
                 </div>
-                <center>
-                    <div class="projects-grid">
-                        <article class="project-card" data-category="web">
-                            <div class="project-image">
-                                <img src="img/SalaEnsayo.jpg" alt="Proyecto Sala Audio - Interfaz de la aplicación" loading="lazy">
-                                <div class="project-overlay">
-                                    <div class="project-details">
-                                        <h3>Sala Audio</h3>
-                                        <p>HTML, CSS, JavaScript, PHP</p>
-                                        <div class="project-links">
-                                            <a href="https://feriasoftwareconcepcion.cl/TSI/grupo2/SalaAudioGIT/Index.php" class="btn" target="_blank" rel="noopener">Visitar Sitio</a>
-                                        </div>
+                <div class="projects-grid">
+                    <article class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="img/SalaEnsayo.jpg" alt="Proyecto Sala Audio - Interfaz de la aplicación" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-details">
+                                    <h3>Sala Audio</h3>
+                                    <p>HTML, CSS, JavaScript, PHP</p>
+                                    <div class="project-links">
+                                        <a href="https://feriasoftwareconcepcion.cl/TSI/grupo2/SalaAudioGIT/Index.php" class="btn" target="_blank" rel="noopener">
+                                            <span class="btn-content">Visitar Sitio</span>
+                                            <span class="btn-glitch"></span>
+                                        </a>
                                     </div>
-                                </div>  
-                            </div>
-                        </article>
-                        
-                        
-                        <!-- Proyecto de ejemplo adicional -->
-                        <article class="project-card" data-category="mobile">
-                            <div class="project-image">
-                                <img src="img/Untitled.png" alt="Aplicación móvil" loading="lazy">
-                                <div class="project-overlay">
-                                    <div class="project-details">
-                                        <h3>App Android</h3>
-                                        <p>Kotlin, Firebase</p>
-                                        <div class="project-links">
-                                            <a href="https://github.com/RazeZor/Proyecto_Slam_Jam" class="btn" target="_blank">Ver Detalles</a>
-                                        </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </article>
+                    
+                    <!-- Proyecto de ejemplo adicional -->
+                    <article class="project-card" data-category="mobile">
+                        <div class="project-image">
+                            <img src="img/Untitled.png" alt="Aplicación móvil" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-details">
+                                    <h3>App Android</h3>
+                                    <p>Kotlin, Firebase</p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/RazeZor/Proyecto_Slam_Jam" class="btn" target="_blank">
+                                            <span class="btn-content">Ver Detalles</span>
+                                            <span class="btn-glitch"></span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </article>
-                        <article class="project-card" data-category="web">
-                            <div class="project-image">
-                                <img src="img/image.png" alt="Aplicación móvil" loading="lazy">
-                                <div class="project-overlay">
-                                    <div class="project-details">
-                                        <h3>Portafolio Cliente</h3>
-                                        <p>Astro</p>
-                                        <div class="project-links">
-                                            <a href="https://tssaraiabigail.vercel.app/" class="btn" target="_blank">Visitar Sitio</a>
-                                            
-                                        </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="img/image.png" alt="Portafolio Cliente" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-details">
+                                    <h3>Portafolio Cliente</h3>
+                                    <p>Astro</p>
+                                    <div class="project-links">
+                                        <a href="https://tssaraiabigail.vercel.app/" class="btn" target="_blank">
+                                            <span class="btn-content">Visitar Sitio</span>
+                                            <span class="btn-glitch"></span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </article>
-                    </div>
-                </center>
-                
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-    
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div P;[-----------------------------------------------------------------------------------------------------------------class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div class="contact-content">
-                <!-- Formulario de contacto -->
-                <div id="alert-container" aria-live="polite"></div>
-                <form class="contact-form" id="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="from_name">Nombre</label>
-                        <input type="text" id="from_name" name="from_name" placeholder="Tu nombre" required>
-                    </div>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-content">
+                    <!-- Formulario de contacto -->
+                    <div id="alert-container" aria-live="polite"></div>
+                    <form class="contact-form" id="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="from_name">Nombre</label>
+                            <input type="text" id="from_name" name="from_name" placeholder="Tu nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="from_email">Correo electrónico</label>
+                            <input type="email" id="from_email" name="from_email" placeholder="tu@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Enviar mensaje</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </form>
                     
-                    <div class="form-group">
-                        <label for="from_email">Correo electrónico</label>
-                        <input type="email" id="from_email" name="from_email" placeholder="tu@email.com" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Asunto</label>
-                        <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        <span class="btn-text">Enviar mensaje</span>
-                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
-                    </button>
-                </form>
-                
-                <!-- Información de contacto y redes sociales -->
-                <div class="contact-info">
-                    <h3>Conectemos</h3>
-                    <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto? No dudes en contactarme a través del formulario o mis redes sociales.</p>
-                    
-                    <div class="social-links">
-                        <a href="https://github.com/RazeZor" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
-                            <i class="fab fa-github"></i> <span>GitHub</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/nacho-javier-831811295/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
-                        </a>
-                        <a href="https://www.instagram.com/n4cho_j4vier/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i> <span>Instagram</span>
-                        </a>
+                    <!-- Información de contacto y redes sociales -->
+                    <div class="contact-info">
+                        <h3>Conectemos</h3>
+                        <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto? No dudes en contactarme a través del formulario o mis redes sociales.</p>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/RazeZor" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i> <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nacho-javier-831811295/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.instagram.com/n4cho_j4vier/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i> <span>Instagram</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -346,8 +422,6 @@
         </div>
     </footer>
 
-   
-    
     <script src="index.js"></script>
 </body>
 </html>
