@@ -3,50 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Ignacio Castillo - Desarrollador Junior especializado en Python, Django y desarrollo web">
-    <title>Ignacio Castillo | Desarrollador Junior</title>
+    <meta name="description" content="Portfolio de Desarrollador - Especializado en Python, Django y desarrollo web">
+    <title>Portfolio | Desarrollador</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
-    <!-- Preconectar a dominios externos para mejorar rendimiento -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="index.css">
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{}</text></svg>">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
 </head>
 <body>
-    <!-- Efecto de scanlines para aspecto retro -->
+    <!-- Efectos visuales -->
     <div class="scanlines" aria-hidden="true"></div>
     <div class="noise-overlay" aria-hidden="true"></div>
 
-    <!-- Header con navegación -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <span class="bracket">{</span>
-                <span class="name">ICJ Developer</span>
-                <span class="bracket">}</span>
-            </div>
-            <nav aria-label="Navegación principal">
-                <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle" aria-expanded="false">
-                    <div class="toggle-icon">
-                        <span class="line line-1"></span>
-                        <span class="line line-2"></span>
-                    </div>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link">Inicio</a></li>
-                    <li><a href="#about" class="nav-link">Sobre Mí</a></li>
-                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
-                    <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                    <li><a href="#contact" class="nav-link">Contacto</a></li>
-                </ul>
-            </nav>
+    <!-- Navbar Vertical -->
+    <nav class="sidebar" aria-label="Navegación principal">
+        <div class="logo">
+            <span class="bracket">{</span>
+            <span class="name">N</span>
+            <span class="bracket">}</span>
         </div>
-    </header>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Inicio</span></a></li>
+            <li><a href="#about" class="nav-link"><i class="fas fa-user"></i><span>Sobre Mí</span></a></li>
+            <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i><span>Habilidades</span></a></li>
+            <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i><span>Proyectos</span></a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contacto</span></a></li>
+        </ul>
+        <div >
+            <a href="https://github.com/RazeZor" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nacho-javier-831811295/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/n4cho_j4vier/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </nav>
 
-    <main>
+    <!-- Botón de menú móvil -->
+    <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle" aria-expanded="false">
+        <div class="toggle-icon">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+        </div>
+    </button>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="particles-container" aria-hidden="true"></div>
@@ -95,16 +100,16 @@
                     </div>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <div class="stat-value">2+</div>
+                            <div class="stat-value">1+</div>
                             <div class="stat-label">Años de experiencia</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">10+</div>
+                            <div class="stat-value">3+</div>
                             <div class="stat-label">Proyectos completados</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value">5+</div>
-                            <div class="stat-label">Tecnologías dominadas</div>
+                            <div class="stat-label">Tecnologías </div>
                         </div>
                     </div>
                 </div>
@@ -129,9 +134,7 @@
                                     <h4>Django</h4>
                                     <span class="skill-level">Intermedio</span>
                                 </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 75%"></div>
-                                </div>
+  
                                 <ul class="skill-details">
                                     <li>Django REST Framework</li>
                                     <li>ORM & Modelos</li>
@@ -149,9 +152,7 @@
                                     <h4>Python</h4>
                                     <span class="skill-level">Intermedio/avanzado</span>
                                 </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 85%"></div>
-                                </div>
+   
                                 <ul class="skill-details">
                                     <li>POO</li>
                                     <li>APIs con Flask & REST API</li>
@@ -175,9 +176,6 @@
                                     <h4>HTML5 & CSS3</h4>
                                     <span class="skill-level">Intermedio</span>
                                 </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 70%"></div>
-                                </div>
                                 <ul class="skill-details">
                                     <li>Diseño Responsivo</li>
                                     <li>Flexbox & Grid</li>
@@ -195,9 +193,7 @@
                                     <h4>JavaScript</h4>
                                     <span class="skill-level">Aprendiendo</span>
                                 </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 50%"></div>
-                                </div>
+   
                                 <ul class="skill-details">
                                     <li>Chart.js</li>
                                     <li>DOM Manipulation</li>
@@ -213,16 +209,11 @@
                     <h3 class="category-title">Ciencia de Datos</h3>
                     <div class="skills-grid">
                         <div class="skill-card" data-aos="fade-up">
-                            <div class="skill-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
+
                             <div class="skill-content">
                                 <div class="skill-header">
                                     <h4>Análisis de Datos</h4>
                                     <span class="skill-level">Aprendiendo</span>
-                                </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 45%"></div>
                                 </div>
                                 <ul class="skill-details">
                                     <li>Pandas & NumPy</li>
@@ -240,9 +231,6 @@
                                 <div class="skill-header">
                                     <h4>Base de datos</h4>
                                     <span class="skill-level">Intermedio</span>
-                                </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 75%"></div>
                                 </div>
                                 <ul class="skill-details">
                                     <li>SQLite</li>
@@ -267,9 +255,6 @@
                                 <div class="skill-header">
                                     <h4>Android Studio</h4>
                                     <span class="skill-level">Intermedio</span>
-                                </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 65%"></div>
                                 </div>
                                 <ul class="skill-details">
                                     <li>Kotlin</li>
@@ -311,7 +296,6 @@
                         </div>
                     </article>
                     
-                    <!-- Proyecto de ejemplo adicional -->
                     <article class="project-card" data-category="mobile">
                         <div class="project-image">
                             <img src="img/Untitled.png" alt="Aplicación móvil" loading="lazy">
@@ -406,21 +390,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Ignacio Castillo Jaramillo / RazeZorDev</p>
-                <div class="footer-nav">
-                    <a href="#home">Inicio</a>
-                    <a href="#about">Sobre Mí</a>
-                    <a href="#skills">Habilidades</a>
-                    <a href="#projects">Proyectos</a>
-                    <a href="#contact">Contacto</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+
 
     <script src="index.js"></script>
 </body>
