@@ -29,7 +29,7 @@
             <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i><span>Proyectos</span></a></li>
             <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contacto</span></a></li>
         </ul>
-        <div >
+        <div>
             <a href="https://github.com/RazeZor" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
                 <i class="fab fa-github"></i>
             </a>
@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="scroll-indicator">
-                <span>Scroll</span>
+                <span>Mas de mi</span>
                 <i class="fas fa-chevron-down"></i>
             </div>
         </section>
@@ -79,8 +79,12 @@
         <section id="about" class="about">
             <div class="container">
                 <h2 class="section-title">Sobre Mí</h2>
-                <div class="about-content">
-                    <div class="about-text">
+                <div class="about-content-minimal">
+                    <div class="profile-image">
+                        <!-- Aquí puedes agregar tu imagen -->
+                        <img src="img/MIlogo.png" alt="Mi foto de perfil" id="profile-photo">
+                    </div>
+                    <div class="about-text-minimal">
                         <p>Desarrollador apasionado por crear experiencias nuevas dentro del mundo de las tecnologías, actualmente aprendiendo sobre la ciencia de datos y microservicios con Flask y Django API Rest.</p>
                         <div class="terminal">
                             <div class="terminal-header">
@@ -93,23 +97,9 @@
                                 <p>> Nombre: <span class="typing">Ignacio Castillo</span></p>
                                 <p>> Rol: <span class="typing">Desarrollador back-end y front-end</span></p>
                                 <p>> Estado: <span class="typing">aprendiendo</span></p>
-                                <p>> Ubicación: <span class="typing">Concepción (Chile)</span></p>
+                                <p>> Ubicación: <span class="typing">Concepción, Chile</span></p>
                                 <p class="terminal-cursor">_</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-value">1+</div>
-                            <div class="stat-label">Años de experiencia</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">3+</div>
-                            <div class="stat-label">Proyectos completados</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">5+</div>
-                            <div class="stat-label">Tecnologías </div>
                         </div>
                     </div>
                 </div>
@@ -209,7 +199,9 @@
                     <h3 class="category-title">Ciencia de Datos</h3>
                     <div class="skills-grid">
                         <div class="skill-card" data-aos="fade-up">
-
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
                             <div class="skill-content">
                                 <div class="skill-header">
                                     <h4>Análisis de Datos</h4>
@@ -389,8 +381,6 @@
             </div>
         </section>
     </main>
-
-
 
     <script src="index.js"></script>
 </body>
