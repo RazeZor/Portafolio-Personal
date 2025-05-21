@@ -29,17 +29,7 @@
             <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i><span>Proyectos</span></a></li>
             <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contacto</span></a></li>
         </ul>
-        <div>
-            <a href="https://github.com/RazeZor" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/nacho-javier-831811295/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/n4cho_j4vier/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
+
     </nav>
 
     <!-- Botón de menú móvil -->
@@ -107,224 +97,293 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="section-title">Habilidades</h2>
+        <!-- Skills Section -->
+<section id="skills" class="skills">
+    <div class="container">
+        <h2 class="section-title">Habilidades</h2>
         
-                <!-- Full Stack Development -->
-                <div class="skills-category">
-                    <h3 class="category-title">Desarrollo Full Stack</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card" data-aos="fade-up">
-                            <div class="skill-icon">
-                                <i class="fas fa-server"></i>
-                            </div>
-                            <div class="skill-content">
-                                <div class="skill-header">
-                                    <h4>Django</h4>
-                                    <span class="skill-level">Intermedio</span>
-                                </div>
-  
-                                <ul class="skill-details">
-                                    <li>Django REST Framework</li>
-                                    <li>ORM & Modelos</li>
-                                    <li>Autenticación & Seguridad</li>
-                                </ul>
-                            </div>
-                        </div>
+        <!-- Tabs de categorías -->
+        <div class="skills-tabs">
+            <button class="tab-btn active" data-tab="fullstack">Full Stack</button>
+            <button class="tab-btn" data-tab="frontend">Frontend</button>
+            <button class="tab-btn" data-tab="data">Ciencia de Datos</button>
+            <button class="tab-btn" data-tab="mobile">Móvil</button>
+        </div>
         
-                        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+        <!-- Contenido de los tabs -->
+        <div class="tab-content-container">
+            <!-- Full Stack -->
+            <div class="tab-content active" id="fullstack-content">
+                <div class="skills-showcase">
+                    <div class="skill-item">
+                        <div class="skill-progress-ring">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle class="progress-ring-circle-bg" stroke-width="8" fill="transparent" r="50" cx="60" cy="60"/>
+                                <circle class="progress-ring-circle" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" data-percent="75"/>
+                            </svg>
                             <div class="skill-icon">
                                 <i class="fab fa-python"></i>
                             </div>
-                            <div class="skill-content">
-                                <div class="skill-header">
-                                    <h4>Python</h4>
-                                    <span class="skill-level">Intermedio/avanzado</span>
-                                </div>
-   
-                                <ul class="skill-details">
-                                    <li>POO</li>
-                                    <li>APIs con Flask & REST API</li>
-                                    <li>Estructura de Datos</li>
-                                </ul>
-                            </div>
+
+                        </div>
+                        <h4>Python</h4>
+                        <div class="skill-details-toggle">
+                            <span>Detalles</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="skill-details-content">
+                            <ul>
+                                <li>POO</li>
+                                <li>APIs con Flask & REST API</li>
+                                <li>Estructura de Datos</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-        
-                <!-- Frontend Development -->
-                <div class="skills-category">
-                    <h3 class="category-title">Frontend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card" data-aos="fade-up">
+                    
+                    <div class="skill-item">
+                        <div class="skill-progress-ring">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle class="progress-ring-circle-bg" stroke-width="8" fill="transparent" r="50" cx="60" cy="60"/>
+                                <circle class="progress-ring-circle" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" data-percent="70"/>
+                            </svg>
                             <div class="skill-icon">
-                                <i class="fab fa-html5"></i>
+                                <i class="fas fa-server"></i>
                             </div>
-                            <div class="skill-content">
-                                <div class="skill-header">
-                                    <h4>HTML5 & CSS3</h4>
-                                    <span class="skill-level">Intermedio</span>
-                                </div>
-                                <ul class="skill-details">
-                                    <li>Diseño Responsivo</li>
-                                    <li>Flexbox & Grid</li>
-                                    <li>Animaciones</li>
-                                </ul>
-                            </div>
+
                         </div>
-        
-                        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                            <div class="skill-icon">
-                                <i class="fab fa-js"></i>
-                            </div>
-                            <div class="skill-content">
-                                <div class="skill-header">
-                                    <h4>JavaScript</h4>
-                                    <span class="skill-level">Aprendiendo</span>
-                                </div>
-   
-                                <ul class="skill-details">
-                                    <li>Chart.js</li>
-                                    <li>DOM Manipulation</li>
-                                    <li>Async/Await</li>
-                                </ul>
-                            </div>
+                        <h4>Django</h4>
+                        <div class="skill-details-toggle">
+                            <span>Detalles</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="skill-details-content">
+                            <ul>
+                                <li>Django REST Framework</li>
+                                <li>ORM & Modelos</li>
+                                <li>Autenticación & Seguridad</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-        
-                <!-- Data Science -->
-                <div class="skills-category">
-                    <h3 class="category-title">Ciencia de Datos</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card" data-aos="fade-up">
-                            <div class="skill-icon">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
-                            <div class="skill-content">
-                                <div class="skill-header">
-                                    <h4>Análisis de Datos</h4>
-                                    <span class="skill-level">Aprendiendo</span>
-                                </div>
-                                <ul class="skill-details">
-                                    <li>Pandas & NumPy</li>
-                                    <li>Visualización de Datos con matplotlib</li>
-                                    <li>Manejo de archivo CSV & Excel</li>
-                                </ul>
-                            </div>
-                        </div>
-        
-                        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    
+                    <div class="skill-item">
+                        <div class="skill-progress-ring">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle class="progress-ring-circle-bg" stroke-width="8" fill="transparent" r="50" cx="60" cy="60"/>
+                                <circle class="progress-ring-circle" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" data-percent="65"/>
+                            </svg>
                             <div class="skill-icon">
                                 <i class="fas fa-database"></i>
                             </div>
-                            <div class="skill-content">
-                                <div class="skill-header">
-                                    <h4>Base de datos</h4>
-                                    <span class="skill-level">Intermedio</span>
-                                </div>
-                                <ul class="skill-details">
-                                    <li>SQLite</li>
-                                    <li>MySQL</li>
-                                    <li>SQL Server</li>
-                                    <li>Access</li>
-                                </ul>
-                            </div>
+
+                        </div>
+                        <h4>SQL</h4>
+                        <div class="skill-details-toggle">
+                            <span>Detalles</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="skill-details-content">
+                            <ul>
+                                <li>SQLite</li>
+                                <li>MySQL</li>
+                                <li>SQL Server</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-        
-                <!-- Móviles -->
-                <div class="skills-category">
-                    <h3 class="category-title">APP Móviles</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card" data-aos="fade-up">
+            </div>
+            
+            <!-- Frontend -->
+            <div class="tab-content" id="frontend-content">
+                <div class="skills-showcase">
+                    <div class="skill-item">
+                        <div class="skill-progress-ring">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle class="progress-ring-circle-bg" stroke-width="8" fill="transparent" r="50" cx="60" cy="60"/>
+                                <circle class="progress-ring-circle" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" data-percent="80"/>
+                            </svg>
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+
+                        </div>
+                        <h4>HTML & CSS</h4>
+                        <div class="skill-details-toggle">
+                            <span>Detalles</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="skill-details-content">
+                            <ul>
+                                <li>Diseño Responsivo</li>
+                                <li>Flexbox & Grid</li>
+                                <li>Animaciones</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-progress-ring">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle class="progress-ring-circle-bg" stroke-width="8" fill="transparent" r="50" cx="60" cy="60"/>
+                                <circle class="progress-ring-circle" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" data-percent="60"/>
+                            </svg>
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+
+                        </div>
+                        <h4>JavaScript</h4>
+                        <div class="skill-details-toggle">
+                            <span>Detalles</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="skill-details-content">
+                            <ul>
+                                <li>Chart.js</li>
+                                <li>DOM Manipulation</li>
+                                <li>Async/Await</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data Science -->
+            <div class="tab-content" id="data-content">
+                <div class="skills-showcase">
+                    <div class="skill-item">
+                        <div class="skill-progress-ring">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle class="progress-ring-circle-bg" stroke-width="8" fill="transparent" r="50" cx="60" cy="60"/>
+                                <circle class="progress-ring-circle" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" data-percent="55"/>
+                            </svg>
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                        </div>
+                        <h4>Análisis de Datos</h4>
+                        <div class="skill-details-toggle">
+                            <span>Detalles</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="skill-details-content">
+                            <ul>
+                                <li>Pandas & NumPy</li>
+                                <li>Visualización con matplotlib</li>
+                                <li>Manejo de CSV & Excel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile -->
+            <div class="tab-content" id="mobile-content">
+                <div class="skills-showcase">
+                    <div class="skill-item">
+                        <div class="skill-progress-ring">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle class="progress-ring-circle-bg" stroke-width="8" fill="transparent" r="50" cx="60" cy="60"/>
+                                <circle class="progress-ring-circle" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" data-percent="65"/>
+                            </svg>
                             <div class="skill-icon">
                                 <i class="fab fa-android"></i>
                             </div>
-                            <div class="skill-content">
-                                <div class="skill-header">
-                                    <h4>Android Studio</h4>
-                                    <span class="skill-level">Intermedio</span>
-                                </div>
-                                <ul class="skill-details">
-                                    <li>Kotlin</li>
-                                    <li>Firebase</li>
-                                    <li>XML</li>
-                                </ul>
-                            </div>
+                        </div>
+                        <h4>Android Studio</h4>
+                        <div class="skill-details-toggle">
+                            <span>Detalles</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="skill-details-content">
+                            <ul>
+                                <li>Kotlin</li>
+                                <li>Firebase</li>
+                                <li>XML</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
         
         <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Proyectos</h2>
-                <div class="projects-filter">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="mobile">Móvil</button>
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Móvil</button>
+        </div>
+        <div class="projects-grid">
+            <article class="project-card-pro" data-category="web">
+                <div class="project-image">
+                    <img src="img/SalaEnsayo.jpg" alt="Proyecto Sala Audio - Interfaz de la aplicación" loading="lazy">
+                    <div class="project-badge">Web</div>
                 </div>
-                <div class="projects-grid">
-                    <article class="project-card" data-category="web">
-                        <div class="project-image">
-                            <img src="img/SalaEnsayo.jpg" alt="Proyecto Sala Audio - Interfaz de la aplicación" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-details">
-                                    <h3>Sala Audio</h3>
-                                    <p>HTML, CSS, JavaScript, PHP</p>
-                                    <div class="project-links">
-                                        <a href="https://feriasoftwareconcepcion.cl/TSI/grupo2/SalaAudioGIT/Index.php" class="btn" target="_blank" rel="noopener">
-                                            <span class="btn-content">Visitar Sitio</span>
-                                            <span class="btn-glitch"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>  
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="mobile">
-                        <div class="project-image">
-                            <img src="img/Untitled.png" alt="Aplicación móvil" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-details">
-                                    <h3>App Android</h3>
-                                    <p>Kotlin, Firebase</p>
-                                    <div class="project-links">
-                                        <a href="https://github.com/RazeZor/Proyecto_Slam_Jam" class="btn" target="_blank">
-                                            <span class="btn-content">Ver Detalles</span>
-                                            <span class="btn-glitch"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="project-card" data-category="web">
-                        <div class="project-image">
-                            <img src="img/image.png" alt="Portafolio Cliente" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-details">
-                                    <h3>Portafolio Cliente</h3>
-                                    <p>Astro</p>
-                                    <div class="project-links">
-                                        <a href="https://tssaraiabigail.vercel.app/" class="btn" target="_blank">
-                                            <span class="btn-content">Visitar Sitio</span>
-                                            <span class="btn-glitch"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                <div class="project-content">
+                    <h3>Sala Audio</h3>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                    </div>
+                    <p class="project-description">Plataforma web para gestión de salas de ensayo musical, permitiendo reservas, administración de equipos y facturación.</p>
+                    <div class="project-links">
+                        <a href="https://feriasoftwareconcepcion.cl/TSI/grupo2/SalaAudioGIT/Index.php" class="btn-project" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Visitar Sitio
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </article>
+            
+            <article class="project-card-pro" data-category="mobile">
+                <div class="project-image">
+                    <img src="img/Untitled.png" alt="Aplicación móvil" loading="lazy">
+                    <div class="project-badge">Móvil</div>
+                </div>
+                <div class="project-content">
+                    <h3>App Android</h3>
+                    <div class="project-tech">
+                        <span>Kotlin</span>
+                        <span>Firebase</span>
+                        <span>Android SDK</span>
+                    </div>
+                    <p class="project-description">Aplicación móvil para Android que permite a músicos encontrar compañeros de banda y organizar sesiones de jam.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/RazeZor/Proyecto_Slam_Jam" class="btn-project" target="_blank">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="project-card-pro" data-category="web">
+                <div class="project-image">
+                    <img src="img/image.png" alt="Portafolio Cliente" loading="lazy">
+                    <div class="project-badge">Web</div>
+                </div>
+                <div class="project-content">
+                    <h3>Portafolio Cliente</h3>
+                    <div class="project-tech">
+                        <span>Astro</span>
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+                    </div>
+                    <p class="project-description">Sitio web de portafolio profesional desarrollado para un cliente, con diseño moderno y optimizado para SEO.</p>
+                    <div class="project-links">
+                        <a href="https://tssaraiabigail.vercel.app/" class="btn-project" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Visitar Sitio
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
 
         <!-- Contact Section -->
         <section id="contact" class="contact">
@@ -372,7 +431,7 @@
                             <a href="https://www.linkedin.com/in/nacho-javier-831811295/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
                             </a>
-                            <a href="https://www.instagram.com/n4cho_j4vier/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                            <a href="https://www.instagram.com/nachodevsc/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i> <span>Instagram</span>
                             </a>
                         </div>
@@ -383,5 +442,6 @@
     </main>
 
     <script src="index.js"></script>
+  
 </body>
 </html>
